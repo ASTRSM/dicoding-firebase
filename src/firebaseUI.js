@@ -6,7 +6,6 @@ var uiConfig = {
   signInSuccessUrl: '/',
   signInFlow: 'popup',
   signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID
   ],
   // tosUrl and privacyPolicyUrl accept either url string or a callback
