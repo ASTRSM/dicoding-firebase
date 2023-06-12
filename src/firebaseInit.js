@@ -1,8 +1,8 @@
-import firebase from 'firebase/compat/app'
+import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
   // Your web app's Firebase configuration....
 }
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
+initializeApp(firebaseConfig)

@@ -1,12 +1,12 @@
-import firebase from 'firebase/compat/app'
 import * as firebaseui from 'firebaseui'
+import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 // FirebaseUI config.
 var uiConfig = {
   signInSuccessUrl: '/',
   signInFlow: 'popup',
   signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID
+    GoogleAuthProvider.PROVIDER_ID
   ],
   // tosUrl and privacyPolicyUrl accept either url string or a callback
   // function.
@@ -19,7 +19,7 @@ var uiConfig = {
 }
 
 // Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth())
+var ui = new firebaseui.auth.AuthUI(getAuth())
 // The start method will wait until the DOM is loaded.
 export default function startUi() {
   const App = document.querySelector('#app')
